@@ -1,9 +1,97 @@
-Data Understanding
+# Spotify Global Chart 2024 – Data Analysis Project
 
-The Spotify Global Chart 2024 dataset consists of weekly rankings of the Top 200 most-streamed songs worldwide on Spotify throughout 2024. The dataset contains 10,600 observations and 10 attributes, representing track-level performance metrics and metadata.
+## Overview
+This project analyzes the Spotify Global Top 200 dataset for the year 2024 using
+Exploratory Data Analysis (EDA). The objective is to understand music popularity
+patterns, chart dynamics, and artist dominance on Spotify’s global charts.
 
-The dataset includes both numerical variables, such as chart rank, streaming counts, and chart longevity (rank, streams, weeks_on_chart), as well as categorical variables, including artist names, track titles, and source identifiers.
+The project follows the CRISP-DM framework and focuses on data cleaning,
+descriptive statistics, visualization, and insight generation.
+No predictive modeling or machine learning is applied.
 
-All columns contain complete data with no missing values, indicating a high level of data quality. However, preliminary inspection reveals potential redundancies (e.g., overlapping source columns) and logical considerations (such as new chart entries reflected in previous_rank values), which will be addressed in the data cleaning phase.
+---
 
-The data cleaning process involved standardizing column names, removing redundant source-related attributes, and handling chart entry logic. Additional features were engineered to identify new chart entries and track rank movement across weeks. The cleaned dataset was saved for subsequent exploratory data analysis.
+## Dataset
+**Spotify Global Chart 2024**
+
+- Source: Public Spotify Global Charts dataset
+- Records: 10,600 weekly observations
+- Key columns:
+  - Chart rank
+  - Track name
+  - Artist name
+  - Weekly streams
+  - Peak rank
+  - Previous rank
+  - Weeks on chart
+  - New entry indicator
+
+The dataset represents the weekly Top 200 most-streamed songs worldwide in 2024.
+
+---
+
+## Project Structure
+spotify-top-songs/
+│
+├── data/
+│ ├── raw/ # Original dataset
+│ └── processed/ # Cleaned and transformed data
+│
+├── notebooks/
+│ ├── 01_data_cleaning.ipynb
+│ ├── 02_eda.ipynb
+│ └── 03_visualizations.ipynb
+│
+├── reports/
+│ ├── crisp_dm_report.docx
+│ └── insights_summary.pdf
+│
+├── src/
+│ ├── data_loading.py
+│ ├── cleaning.py
+│ ├── eda.py
+│ └── plots.py
+│
+└── README.md
+
+
+---
+
+## Analysis Scope
+**Included**
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Visualization of trends and distributions
+- Business-oriented insights
+
+**Excluded**
+- Machine learning models
+- Prediction or recommendation systems
+- Audio feature analysis via Spotify API
+- Lyrics or sentiment analysis
+
+---
+
+## Key Findings
+- Stream counts show a strong right-skewed distribution.
+- Higher-ranked songs generally achieve higher stream counts.
+- A small number of artists dominate chart appearances.
+- Most songs have short chart lifespans.
+- New entries face strong competition to remain on the chart.
+
+Detailed insights are available in the `insights_summary.pdf` report.
+
+---
+
+## Tools and Technologies
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+---
+
+## Purpose
+This project is intended for learning, portfolio presentation, and demonstration
+of data analysis and EDA skills.
